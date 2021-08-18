@@ -58,7 +58,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	re := regexp.MustCompile("/pokemon/([0-9]+)*")
 
 	var result []structs.Pokemon
-	for _, v := range randomSelection[:2] {
+	for _, v := range randomSelection[:3] {
 
 		match := re.FindStringSubmatch(ps.Results[v].URL)
 		p, err := pokeapi.Pokemon(match[1])
